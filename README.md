@@ -1,6 +1,17 @@
-# open API packaging
-
+# open API Library
 아래 사이트의 각 open API들을 함수로 구현해서 패키징하기 
+
+>설치방법
+```bash
+pip install https://github.com/xnsl291/myAPIs.git
+```
+>사용방법
+```python
+from my_api import naver_api
+search_api(code,client_id,client_secret,params)
+translate_api(text,client_id,client_secret,source="ko",target="en",url = "https://openapi.naver.com/v1/papago/n2mt" )
+```
+>기본정보
 - [Naver Developers](https://developers.naver.com/)
 
     1. search_api (검색API)
@@ -19,7 +30,6 @@
 
     2. translate_api (번역API)
         - text - 번역하고자 하는 문자열(필수)
-        - client_id, client_secret - 인증키 (필수)
         - source - 원본언어 (default : ko) 
         - target - 목적언어 (default : en)
         - 언어코드
